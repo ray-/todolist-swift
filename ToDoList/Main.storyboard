@@ -16,13 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New to-do item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZZi-xr-1Ib">
-                                <rect key="frame" x="20" y="190" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New to-do item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZZi-xr-1Ib">
+                                <rect key="frame" x="20" y="55" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZZi-xr-1Ib" firstAttribute="top" secondItem="wNv-Ku-LOy" secondAttribute="bottom" constant="35" id="IZH-fu-aUy"/>
+                            <constraint firstItem="ZZi-xr-1Ib" firstAttribute="leading" secondItem="aQg-Or-8OH" secondAttribute="leading" constant="20" symbolic="YES" id="NqQ-Zy-TfI"/>
+                            <constraint firstAttribute="trailing" secondItem="ZZi-xr-1Ib" secondAttribute="trailing" constant="20" symbolic="YES" id="uM2-9o-b21"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEi-89-SSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
