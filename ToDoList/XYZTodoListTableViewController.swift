@@ -46,7 +46,12 @@ import UIKit
 
 
     @IBAction func unwindToList(segue: UIStoryboardSegue) {
-        println("unwind " + segue.description);
+        let source : XYZAddToDoItemViewController = segue.sourceViewController as XYZAddToDoItemViewController
+        
+        if (source.toDoItem) {
+            self.toDoItems.addObject(source.toDoItem)
+            self.tableView.reloadData()
+        }
     }
     
     func loadInitialData() {
