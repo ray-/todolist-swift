@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Table View Controller - My To-Do List-->
         <scene sceneID="aW8-9r-Pl6">
             <objects>
                 <tableViewController id="Ytb-4B-brC" sceneMemberID="viewController">
@@ -205,13 +205,19 @@
                             <outlet property="delegate" destination="Ytb-4B-brC" id="GNH-c8-R5y"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="wXB-qI-H3V"/>
+                    <navigationItem key="navigationItem" title="My To-Do List" id="wXB-qI-H3V">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="53s-4x-1wW">
+                            <connections>
+                                <segue destination="dcR-au-tO0" kind="modal" id="hPZ-at-aUd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53W-SI-ys4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="682" y="661"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Add To-Do Item-->
         <scene sceneID="gFE-Iz-bPC">
             <objects>
                 <viewController id="0cw-WR-tLm" sceneMemberID="viewController">
@@ -224,22 +230,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New to-do item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZZi-xr-1Ib">
-                                <rect key="frame" x="20" y="55" width="280" height="30"/>
+                                <rect key="frame" x="20" y="85" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZZi-xr-1Ib" firstAttribute="top" secondItem="wNv-Ku-LOy" secondAttribute="bottom" constant="35" id="IZH-fu-aUy"/>
+                            <constraint firstItem="ZZi-xr-1Ib" firstAttribute="top" secondItem="wNv-Ku-LOy" secondAttribute="bottom" constant="21" id="IZH-fu-aUy"/>
                             <constraint firstItem="ZZi-xr-1Ib" firstAttribute="leading" secondItem="aQg-Or-8OH" secondAttribute="leading" constant="20" symbolic="YES" id="NqQ-Zy-TfI"/>
                             <constraint firstAttribute="trailing" secondItem="ZZi-xr-1Ib" secondAttribute="trailing" constant="20" symbolic="YES" id="uM2-9o-b21"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Add To-Do Item" id="xiv-PQ-m9c">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="ijW-pz-Mrq"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="6It-PO-fpQ"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEi-89-SSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049" y="687"/>
+            <point key="canvasLocation" x="1581" y="687"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0iO-iB-e17">
@@ -258,6 +268,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3N-IS-BzJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="150" y="661"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rIs-Lu-V7z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dcR-au-tO0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MsC-nh-Fur">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0cw-WR-tLm" kind="relationship" relationship="rootViewController" id="asn-Be-hKk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VPW-aH-yWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049" y="687"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
