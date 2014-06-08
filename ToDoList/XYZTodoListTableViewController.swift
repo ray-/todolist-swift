@@ -10,9 +10,13 @@ import UIKit
 
 // See http://stackoverflow.com/questions/24029586/xcode-6-storyboard-unwind-segue-with-swift-not-connecting-to-exit
 @objc(XYZTodoListTableViewController) class XYZTodoListTableViewController: UITableViewController {
+
+    var toDoItems : NSMutableArray = NSMutableArray()
+    let CellIdentifier : NSString = "ListPrototypeCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadInitialData()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -31,29 +35,40 @@ import UIKit
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
     
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return self.toDoItems.count
+    }
+
+
+    @IBAction func unwindToList(segue: UIStoryboardSegue) {
+        println("unwind " + segue.description);
+    }
+    
+    func loadInitialData() {
+        var item1: XYZToDoItem = XYZToDoItem(itemName: "Buy Milk")
+        var item2: XYZToDoItem = XYZToDoItem(itemName: "Buy eggs")
+        var item3: XYZToDoItem = XYZToDoItem(itemName: "Read a book")
+        
+        self.toDoItems.addObject(item1)
+        self.toDoItems.addObject(item2)
+        self.toDoItems.addObject(item3)
     }
     
 
-    @IBAction func unwindToList(segue: UIStoryboardSegue) {
-        
-    }
-    
-    /*
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell? {
-    let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        // something smells dangerous here
+        var cell = tableView?.dequeueReusableCellWithIdentifier(CellIdentifier, forIndexPath: indexPath) as? UITableViewCell
+        var toDoItem : XYZToDoItem = self.toDoItems.objectAtIndex(indexPath!.row) as XYZToDoItem
     
-    // Configure the cell...
-    
-    return cell
+        cell!.text = toDoItem.itemName
+        return cell
     }
-    */
+
     
     /*
     // Override to support conditional editing of the table view.

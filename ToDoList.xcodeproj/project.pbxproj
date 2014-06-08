@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8469D23D194401D2000E2F84 /* XYZToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469D23C194401D2000E2F84 /* XYZToDoItem.swift */; };
 		848FBE6F19438ED600C5976C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FBE6E19438ED600C5976C /* AppDelegate.swift */; };
 		848FBE7119438ED600C5976C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848FBE7019438ED600C5976C /* Images.xcassets */; };
 		848FBE7D19438ED600C5976C /* ToDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848FBE7C19438ED600C5976C /* ToDoListTests.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		8469D23B1943F9E6000E2F84 /* XYZTodoListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XYZTodoListTableViewController.h; path = ../XYZTodoListTableViewController.h; sourceTree = "<group>"; };
+		8469D23C194401D2000E2F84 /* XYZToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYZToDoItem.swift; sourceTree = "<group>"; };
 		848FBE6919438ED600C5976C /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848FBE6D19438ED600C5976C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		848FBE6E19438ED600C5976C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				84D2520219439024002C589B /* Main.storyboard */,
 				8469D23B1943F9E6000E2F84 /* XYZTodoListTableViewController.h */,
 				84D252081943F0C5002C589B /* XYZTodoListTableViewController.swift */,
+				8469D23C194401D2000E2F84 /* XYZToDoItem.swift */,
 				84D252091943F0C5002C589B /* XYZTodoListTableViewController.xib */,
 				84D252041943EEB5002C589B /* XYZAddToDoItemViewController.swift */,
 				84D252051943EEB5002C589B /* XYZAddToDoItemViewController.xib */,
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8469D23D194401D2000E2F84 /* XYZToDoItem.swift in Sources */,
 				84D2520A1943F0C5002C589B /* XYZTodoListTableViewController.swift in Sources */,
 				848FBE6F19438ED600C5976C /* AppDelegate.swift in Sources */,
 				84D252061943EEB5002C589B /* XYZAddToDoItemViewController.swift in Sources */,
