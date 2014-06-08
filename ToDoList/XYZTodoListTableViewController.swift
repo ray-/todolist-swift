@@ -66,7 +66,22 @@ import UIKit
         var toDoItem : XYZToDoItem = self.toDoItems.objectAtIndex(indexPath!.row) as XYZToDoItem
     
         cell!.text = toDoItem.itemName
+        
+        if (toDoItem.completed) {
+            cell!.accessoryType = UITableViewCellAccessoryType.Checkmark
+        } else {
+            cell!.accessoryType = UITableViewCellAccessoryType.None
+        }
+
         return cell
+    }
+    
+    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        
+        let tappedItem : XYZToDoItem = self.toDoItems.objectAtIndex(indexPath.row) as XYZToDoItem
+        tappedItem.completed = !tappedItem.completed
+        tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
     }
 
     
